@@ -18,7 +18,7 @@ class Bookshelf {
 }
 
 function loadBooks(bookshelf) {
-	fakeAjax(BOOK_API,function onBooks(bookNames){
+	fakeAjax(BOOK_API, function onBooks(bookNames) {
 		for (let bookName of bookNames) {
 			bookshelf.addFavoriteBook(bookName);
 		}
@@ -34,8 +34,8 @@ loadBooks(myBooks);
 // ***********************
 
 // NOTE: don't modify this function at all
-function fakeAjax(url,cb) {
-	setTimeout(function fakeLoadingDelay(){
+function fakeAjax(url, cb) {
+	setTimeout(function fakeLoadingDelay() {
 		cb([
 			"A Song of Ice and Fire",
 			"The Great Gatsby",
@@ -43,5 +43,5 @@ function fakeAjax(url,cb) {
 			"Great Expectations",
 			"You Don't Know JS"
 		]);
-	},500);
+	}, 500);
 }
